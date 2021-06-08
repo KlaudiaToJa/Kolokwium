@@ -11,3 +11,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.kwadrat{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style: none;
+}
