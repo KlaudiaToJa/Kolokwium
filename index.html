@@ -12,7 +12,7 @@
         </div>
 
         <ul class="kwadrat" v-for="(liczbaRows, indexR) in rows">
-            <li v-for="(liczbaColumns, indexC) in columns">
+            <li v-for="(liczbaColumns, indexC) in columns" @click="przechwyc( (indexR + 1), (indexC + 1))">
                 <div :class="[ 'cell', {'cell active' : (active.substring(0, 1) == (indexR + 1) && active.substring(-1, 1) == (indexC + 1))} ]">1</div>  
             </li>
         </ul>
@@ -28,6 +28,11 @@
             rows: 10,
             columns: 10,
             active: "1,1"
+        },
+        methods: {
+            przechwyc: function(row, column){
+                this.active = row.toString() + "," + column.toString();
+            }
         }
     })
     </script>
