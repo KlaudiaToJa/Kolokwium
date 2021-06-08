@@ -20,3 +20,8 @@
 li{
     list-style: none;
 }
+
+.active{
+    background-color: red;
+    color: white;
+}
